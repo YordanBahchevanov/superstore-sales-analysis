@@ -1,0 +1,11 @@
+# Ignore rawa data
+/data/*.csv
+
+# Ignore Jupyter checkpoints
+**/.ipynb_checkpoints
+
+# Virtual environments
+/venv/
+.env
+
+helper.py
