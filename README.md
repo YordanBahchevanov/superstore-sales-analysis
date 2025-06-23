@@ -1,19 +1,26 @@
 # Superstore Sales Analysis
 
+A data analysis project exploring sales performance for a fictional Superstore chain.  
+The goal is to extract insights on revenue drivers, customer trends, and product performance.
+
 ## Project Overview
 
-Exploratory Data Analysis and Business Insights project on Superstore retail sales data.  
-Using PostgreSQL for data extraction and Python (pandas, matplotlib, seaborn) for visualization.
+- Load raw CSV data into a PostgreSQL database
+- Analyze sales trends with SQL and Python
+- Visualize key metrics and insights
+- Structure project for reproducibility
 
 ## Tools Used
 
-- PostgreSQL
-- Python 3.x
-- pandas
-- matplotlib / seaborn
-- SQLAlchemy
-- psycopg2
-- Jupyter Notebook
+- Python (pandas, SQLAlchemy, matplotlib, seaborn)
+- PostgreSQL (psycopg2)
+- Jupyter Notebooks
+- dotenv (.env for secure credentials)
+- Git & GitHub
+
+## Data Source
+
+- Superstore Sales Data
 
 ## Key Insights
 
@@ -22,14 +29,37 @@ Using PostgreSQL for data extraction and Python (pandas, matplotlib, seaborn) fo
 - Customer analysis
 - Profitability by category
 
-## Folder Structure
+## Project Structure
 
-/data --> Raw data (CSV)
-/sql --> SQL scripts (load & analysis)
-/notebooks --> Jupyter notebooks
+- superstore-sales-analysis/
+- │
+- ├── data/ # Raw CSV (gitignored)
+- ├── sql/ # Reusable SQL queries
+- ├── notebooks/ # Jupyter Notebooks
+- ├── reports/ # Exported visualizations
+- ├── requirements.txt # Dependencies
+- ├── .env # Database password (gitignored)
+- ├── .gitignore
+- └── README.md
 
 ## How to Run
 
-1. Load `Superstore.csv` into PostgreSQL using `sql/load_data.sql`
-2. Run analysis queries from `sql/analysis_queries.sql`
-3. Connect Jupyter notebook to Postgres and perform visual analysis
+1. Clone the repo:
+
+```bash
+git clone https://github.com/YordanBahchevanov/superstore-sales-analysis.git
+cd superstore-sales-analysis
+```
+
+2. Set up a .env file:
+
+DB_PASSWORD=your_postgres_password
+
+3. Install dependencies:
+
+pip install -r requirements.txt
+
+4. Run notebooks:
+
+- 01_load_data.ipynb — Load CSV into Postgres
+- 02_analysis.ipynb — Perform analysis & generate charts
